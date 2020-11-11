@@ -1,0 +1,19 @@
+Projeto Interruptor Bluetooth Versão 1.0
+Autor: Guilherme Lopes
+
+Descrição:
+-Projeto consiste em um Rele de estado sólido que é controlado por um arduino nano, que irá receber
+instruções por um modulo Bluetooth.
+
+Etapas:
+Hardware
+-Esquemático - Concluído
+-PCB - Concluído 
+-BOOM - 
+-Arquivos de Fabricação - Concluido
+-Cotação de compontes - 
+-Custo do Hardware -
+
+Software
+-Pseudocódigo
+-Código

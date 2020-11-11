@@ -1,0 +1,587 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr User 10236 5906
+encoding utf-8
+Sheet 1 1
+Title "Interruptor Bluetooth"
+Date "2020-10-03"
+Rev "1.0"
+Comp "GonibeTech"
+Comment1 "Esquemático finalizado"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R4
+U 1 1 5F3D146B
+P 6630 2025
+F 0 "R4" V 6710 2015 50  0000 C CNN
+F 1 "330R" V 6550 2025 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6560 2025 50  0001 C CNN
+F 3 "~" H 6630 2025 50  0001 C CNN
+	1    6630 2025
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5F3D1CDB
+P 6830 1530
+F 0 "D1" V 6869 1413 50  0000 R CNN
+F 1 "LED" V 6778 1413 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 6830 1530 50  0001 C CNN
+F 3 "~" H 6830 1530 50  0001 C CNN
+	1    6830 1530
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Q_NPN_BCE Q1
+U 1 1 5F3D2BE8
+P 7235 2025
+F 0 "Q1" H 7426 2071 50  0000 L CNN
+F 1 "Q_NPN_BCE" H 7426 1980 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7435 2125 50  0001 C CNN
+F 3 "~" H 7235 2025 50  0001 C CNN
+	1    7235 2025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6780 2025 7035 2025
+Wire Wire Line
+	7335 2225 7335 2430
+Wire Wire Line
+	7335 1775 6830 1775
+Wire Wire Line
+	6830 1775 6830 1680
+$Comp
+L Device:R R3
+U 1 1 5F3DEE41
+P 6830 1120
+F 0 "R3" V 6910 1195 50  0000 C CNN
+F 1 "330R" V 6730 1130 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6760 1120 50  0001 C CNN
+F 3 "~" H 6830 1120 50  0001 C CNN
+	1    6830 1120
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6830 1380 6830 1270
+Wire Wire Line
+	6830 970  6830 890 
+$Comp
+L pspice:DIODE D2
+U 1 1 5F3E0710
+P 7335 1350
+F 0 "D2" V 7381 1222 50  0000 R CNN
+F 1 "DIODE" V 7290 1222 50  0000 R CNN
+F 2 "Diode_SMD:D_0805_2012Metric" H 7335 1350 50  0001 C CNN
+F 3 "~" H 7335 1350 50  0001 C CNN
+	1    7335 1350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6830 890  7335 890 
+Wire Wire Line
+	7335 890  7335 1150
+Connection ~ 6830 890 
+Wire Wire Line
+	6830 890  6830 840 
+Wire Wire Line
+	7930 890  7335 890 
+Connection ~ 7335 890 
+Wire Wire Line
+	7335 1550 7335 1775
+Wire Wire Line
+	7335 1775 7930 1775
+Wire Wire Line
+	7930 1775 7930 1675
+Connection ~ 7335 1775
+Wire Wire Line
+	7335 1775 7335 1825
+Wire Wire Line
+	8330 1675 8330 1860
+Text Label 8330 1860 1    50   ~ 0
+C
+Text Label 8330 920  3    50   ~ 0
+NA
+Wire Wire Line
+	7930 890  7930 1075
+$Comp
+L Relay:G5Q-1A K1
+U 1 1 5F727205
+P 8130 1375
+F 0 "K1" H 8460 1421 50  0000 L CNN
+F 1 "G5Q-1A" H 8460 1330 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPST_Omron-G5Q-1A" H 8480 1325 50  0001 L CNN
+F 3 "https://www.omron.com/ecb/products/pdf/en-g5q.pdf" H 8130 1375 50  0001 C CNN
+	1    8130 1375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8330 1075 8330 920 
+Text Label 1055 2455 1    39   ~ 0
+STATE
+Wire Wire Line
+	1055 2315 1055 2510
+Wire Wire Line
+	1255 2315 1255 2510
+Wire Wire Line
+	1455 2315 1455 2510
+Text Label 1255 2510 1    39   ~ 0
+TX
+Text Label 1455 2510 1    39   ~ 0
+VCC
+$Comp
+L Device:R R1
+U 1 1 5F7478DB
+P 850 2650
+F 0 "R1" V 770 2650 50  0000 C CNN
+F 1 "1k" V 930 2650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 780 2650 50  0001 C CNN
+F 3 "~" H 850 2650 50  0001 C CNN
+	1    850  2650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F74820B
+P 1255 2650
+F 0 "R2" V 1175 2645 50  0000 C CNN
+F 1 "2k" V 1335 2650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1185 2650 50  0001 C CNN
+F 3 "~" H 1255 2650 50  0001 C CNN
+	1    1255 2650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1000 2650 1050 2650
+Wire Wire Line
+	1050 2650 1050 2555
+Wire Wire Line
+	1050 2555 1155 2555
+Wire Wire Line
+	1155 2315 1155 2555
+Connection ~ 1050 2650
+Wire Wire Line
+	1050 2650 1105 2650
+Wire Wire Line
+	1355 2575 1445 2575
+Wire Wire Line
+	1445 2575 1445 2650
+Wire Wire Line
+	1445 2650 1405 2650
+Wire Wire Line
+	1355 2315 1355 2550
+Text Label 580  2650 0    39   ~ 0
+RX
+Wire Wire Line
+	700  2650 580  2650
+Text Notes 560  1590 0    39   ~ 0
+MODULE HC-05/06/08\n
+Wire Notes Line
+	1310 1640 1310 1490
+Wire Notes Line
+	550  1640 1310 1640
+Wire Notes Line
+	1980 1490 1980 2775
+Wire Notes Line
+	1980 2775 550  2775
+Wire Notes Line
+	550  1490 1980 1490
+Wire Notes Line
+	550  1490 550  2775
+Wire Notes Line
+	9645 545  9645 2705
+Wire Notes Line
+	9645 2705 5790 2705
+Wire Notes Line
+	5790 2705 5790 545 
+Wire Notes Line
+	5790 780  6735 780 
+Wire Notes Line
+	6735 780  6735 545 
+Wire Notes Line
+	5790 545  9645 545 
+Text Notes 5810 725  0    50   ~ 0
+MOD. RELE\n\n
+Text Notes 565  1745 0    39   ~ 0
+*Incluir componente - modulo HC-05\n
+$Comp
+L Converter_ACDC:HLK-PM01 SOURCE1
+U 1 1 5F7590BB
+P 1690 1025
+F 0 "SOURCE1" H 1690 1350 50  0000 C CNN
+F 1 "HLK-PM01" H 1690 1259 50  0000 C CNN
+F 2 "Converter_ACDC:Converter_ACDC_HiLink_HLK-PMxx" H 1690 725 50  0001 C CNN
+F 3 "http://www.hlktech.net/product_detail.php?ProId=54" H 2090 675 50  0001 C CNN
+	1    1690 1025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2090 1125 2290 1125
+Wire Wire Line
+	2290 1125 2290 1230
+Wire Wire Line
+	2090 925  2290 925 
+Wire Wire Line
+	2290 925  2290 830 
+$Comp
+L power:+5V #PWR0103
+U 1 1 5F7600C3
+P 2290 830
+F 0 "#PWR0103" H 2290 680 50  0001 C CNN
+F 1 "+5V" H 2305 1003 50  0000 C CNN
+F 2 "" H 2290 830 50  0001 C CNN
+F 3 "" H 2290 830 50  0001 C CNN
+	1    2290 830 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5F7606E7
+P 2290 1230
+F 0 "#PWR0104" H 2290 980 50  0001 C CNN
+F 1 "GND" H 2295 1057 50  0000 C CNN
+F 2 "" H 2290 1230 50  0001 C CNN
+F 3 "" H 2290 1230 50  0001 C CNN
+	1    2290 1230
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5F76117E
+P 7335 2475
+F 0 "#PWR0105" H 7335 2225 50  0001 C CNN
+F 1 "GND" H 7340 2302 50  0000 C CNN
+F 2 "" H 7335 2475 50  0001 C CNN
+F 3 "" H 7335 2475 50  0001 C CNN
+	1    7335 2475
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	540  530  3185 530 
+Wire Notes Line
+	3185 530  3185 1445
+Wire Notes Line
+	3185 1445 540  1445
+Wire Notes Line
+	540  530  540  1445
+Text Notes 580  645  0    50   ~ 0
+Fonte - HILINK 5V\n
+Wire Notes Line
+	545  680  1350 680 
+Wire Notes Line
+	1350 680  1350 530 
+$Comp
+L Connector_Generic:Conn_01x06 HC-5
+U 1 1 5F74FBED
+P 1255 2115
+F 0 "HC-5" V 1340 2370 50  0000 R CNN
+F 1 "MODULE" V 1350 2070 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 1255 2115 50  0001 C CNN
+F 3 "~" H 1255 2115 50  0001 C CNN
+	1    1255 2115
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR0108
+U 1 1 5F7521A4
+P 6830 840
+F 0 "#PWR0108" H 6830 690 50  0001 C CNN
+F 1 "+5V" V 6830 1040 28  0000 C CNN
+F 2 "" H 6830 840 50  0000 C CNN
+F 3 "" H 6830 840 50  0000 C CNN
+	1    6830 840 
+	1    0    0    -1  
+$EndComp
+Text Label 5895 2025 0    60   ~ 0
+RELE_pin
+$Comp
+L Device:R R5
+U 1 1 5F735422
+P 6395 2280
+F 0 "R5" V 6475 2270 50  0000 C CNN
+F 1 "10K" V 6315 2280 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6325 2280 50  0001 C CNN
+F 3 "~" H 6395 2280 50  0001 C CNN
+	1    6395 2280
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6395 2130 6395 2025
+Connection ~ 6395 2025
+Wire Wire Line
+	6395 2025 6480 2025
+Wire Wire Line
+	6395 2480 7295 2480
+Wire Wire Line
+	7295 2480 7295 2430
+Wire Wire Line
+	7295 2430 7335 2430
+Connection ~ 7335 2430
+Wire Wire Line
+	7335 2430 7335 2475
+Wire Wire Line
+	6395 2430 6395 2480
+Wire Wire Line
+	5895 2025 6395 2025
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 5F750FAD
+P 4415 2095
+F 0 "A1" H 3950 2960 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 5050 3040 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 4415 2095 50  0001 C CIN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 4415 2095 50  0001 C CNN
+	1    4415 2095
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4415 3095 4415 3205
+Wire Wire Line
+	4415 3205 4465 3205
+Wire Wire Line
+	4515 3205 4515 3095
+Wire Wire Line
+	4465 3205 4465 3315
+Connection ~ 4465 3205
+Wire Wire Line
+	4465 3205 4515 3205
+$Comp
+L power:GND #PWR0109
+U 1 1 5F769842
+P 4465 3315
+F 0 "#PWR0109" H 4465 3065 50  0001 C CNN
+F 1 "GND" H 4470 3142 50  0000 C CNN
+F 2 "" H 4465 3315 50  0001 C CNN
+F 3 "" H 4465 3315 50  0001 C CNN
+	1    4465 3315
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0110
+U 1 1 5F7751EF
+P 4315 975
+F 0 "#PWR0110" H 4315 825 50  0001 C CNN
+F 1 "+5V" H 4330 1148 50  0000 C CNN
+F 2 "" H 4315 975 50  0001 C CNN
+F 3 "" H 4315 975 50  0001 C CNN
+	1    4315 975 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3915 1695 3775 1695
+Wire Wire Line
+	3775 1795 3915 1795
+Text Label 3775 1695 0    39   ~ 0
+TX
+Text Label 3775 1795 0    39   ~ 0
+RX
+Wire Wire Line
+	4315 1095 4315 975 
+Wire Wire Line
+	3915 1995 3775 1995
+Wire Wire Line
+	3545 1895 3915 1895
+Text Label 3545 1895 0    50   ~ 0
+RELE_pin
+Wire Wire Line
+	7330 2430 7335 2430
+Wire Wire Line
+	7335 2430 7645 2430
+Text Label 7645 2430 2    50   ~ 0
+GND
+Wire Wire Line
+	955  925  1290 925 
+Text Label 955  925  0    50   ~ 0
+AC_1
+Text Label 955  1125 0    39   ~ 0
+AC_2
+$Comp
+L Connector_Generic:Conn_01x04 INPUT1
+U 1 1 5F7CD639
+P 2560 2180
+F 0 "INPUT1" H 2640 2172 50  0000 L CNN
+F 1 "Conn_01x04" H 2640 2081 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-4_P5.08mm" H 2560 2180 50  0001 C CNN
+F 3 "~" H 2560 2180 50  0001 C CNN
+	1    2560 2180
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2360 2080 2210 2080
+Wire Wire Line
+	2360 2180 2205 2180
+Text Label 2210 2080 0    39   ~ 0
+NA
+Text Label 2205 2180 0    39   ~ 0
+C
+Wire Wire Line
+	2360 2280 2210 2280
+Wire Wire Line
+	2360 2380 2210 2380
+Text Label 2210 2280 0    39   ~ 0
+AC_1
+Text Label 2210 2380 0    39   ~ 0
+AC_2
+Text Label 1155 2485 1    39   ~ 0
+RX_M
+Wire Notes Line
+	2005 1490 3185 1490
+Wire Notes Line
+	3185 1490 3185 2775
+Wire Notes Line
+	3185 2775 1995 2775
+Wire Notes Line
+	1995 2775 1995 1495
+Text Notes 2020 1595 0    39   ~ 0
+Entrada e Saída AC\n
+Wire Notes Line
+	1995 1595 2615 1595
+Wire Notes Line
+	2615 1595 2615 1490
+Wire Notes Line
+	3250 4035 3250 530 
+Text Notes 3270 635  0    39   ~ 0
+Arduino Nano\n
+Wire Notes Line
+	3685 530  3685 680 
+Wire Notes Line
+	3685 680  3250 680 
+Wire Notes Line
+	3250 4035 5750 4035
+Wire Notes Line
+	3250 530  5750 530 
+Wire Notes Line
+	5750 530  5750 4045
+Wire Wire Line
+	3915 1495 3775 1495
+Wire Wire Line
+	3915 1595 3775 1595
+NoConn ~ 3775 1495
+NoConn ~ 3775 1595
+Wire Wire Line
+	3915 2095 3775 2095
+Wire Wire Line
+	3915 2195 3775 2195
+Wire Wire Line
+	3915 2295 3775 2295
+NoConn ~ 3775 1995
+NoConn ~ 3775 2095
+NoConn ~ 3775 2195
+NoConn ~ 3775 2295
+Wire Wire Line
+	3915 2395 3780 2395
+Wire Wire Line
+	3915 2495 3780 2495
+Wire Wire Line
+	3915 2595 3780 2595
+Wire Wire Line
+	3915 2695 3780 2695
+NoConn ~ 3780 2395
+NoConn ~ 3780 2495
+NoConn ~ 3780 2595
+NoConn ~ 3780 2695
+Wire Wire Line
+	3915 2795 3780 2795
+NoConn ~ 3780 2795
+Wire Wire Line
+	4915 1495 5050 1495
+Wire Wire Line
+	4915 1595 5050 1595
+Wire Wire Line
+	4915 1895 5050 1895
+Wire Wire Line
+	4915 2095 5050 2095
+Wire Wire Line
+	4915 2195 5050 2195
+Wire Wire Line
+	4915 2295 5050 2295
+Wire Wire Line
+	4915 2395 5050 2395
+Wire Wire Line
+	4915 2495 5050 2495
+Wire Wire Line
+	4915 2595 5050 2595
+Wire Wire Line
+	4915 2695 5050 2695
+Wire Wire Line
+	4915 2795 5050 2795
+NoConn ~ 5050 2795
+NoConn ~ 5050 2695
+NoConn ~ 5050 2595
+NoConn ~ 5050 2495
+NoConn ~ 5050 2395
+NoConn ~ 5050 2295
+NoConn ~ 5050 2195
+NoConn ~ 5050 2095
+NoConn ~ 5050 1895
+NoConn ~ 5050 1495
+NoConn ~ 5050 1595
+Wire Wire Line
+	4515 1095 4515 1000
+Wire Wire Line
+	4615 1095 4615 1000
+NoConn ~ 4515 1000
+NoConn ~ 4615 1000
+NoConn ~ 1055 2510
+Wire Wire Line
+	1455 2510 1650 2510
+Wire Wire Line
+	1650 2510 1650 2400
+$Comp
+L power:+5V #PWR0101
+U 1 1 5F82C643
+P 1650 2400
+F 0 "#PWR0101" H 1650 2250 50  0001 C CNN
+F 1 "+5V" H 1690 2530 50  0000 C CNN
+F 2 "" H 1650 2400 50  0001 C CNN
+F 3 "" H 1650 2400 50  0001 C CNN
+	1    1650 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5F82FB8D
+P 1595 2550
+F 0 "#PWR0102" H 1595 2300 50  0001 C CNN
+F 1 "GND" H 1600 2377 50  0000 C CNN
+F 2 "" H 1595 2550 50  0001 C CNN
+F 3 "" H 1595 2550 50  0001 C CNN
+	1    1595 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1355 2550 1595 2550
+Connection ~ 1355 2550
+Wire Wire Line
+	1355 2550 1355 2575
+Wire Wire Line
+	1555 2315 1555 2365
+NoConn ~ 1555 2365
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5F83C6C1
+P 955 1125
+F 0 "#FLG0101" H 955 1200 50  0001 C CNN
+F 1 "PWR_FLAG" V 955 1252 50  0000 L CNN
+F 2 "" H 955 1125 50  0001 C CNN
+F 3 "~" H 955 1125 50  0001 C CNN
+	1    955  1125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5F83F84F
+P 955 925
+F 0 "#FLG0102" H 955 1000 50  0001 C CNN
+F 1 "PWR_FLAG" V 955 1052 50  0000 L CNN
+F 2 "" H 955 925 50  0001 C CNN
+F 3 "~" H 955 925 50  0001 C CNN
+	1    955  925 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	955  1125 1290 1125
+$EndSCHEMATC
